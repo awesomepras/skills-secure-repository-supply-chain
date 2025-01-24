@@ -11,6 +11,12 @@ updates:
     # Check the npm registry for updates every day (weekdays)
     schedule:
       interval: "daily"
+    commit-message:
+      prefix: "fix" # Can be "fix", "feat", or "none"
+    versioning-strategy: "auto" # Can be "auto", "widen", "lockfile-only", or "increase"
+    ignore:
+      - dependency-name: "node"
+        versions: ["<7.0.0"] # Ignore versions below 8.0.0
   - package-ecosystem: "nuget"
     directory: "/code/"
     schedule:
